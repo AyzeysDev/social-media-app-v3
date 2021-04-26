@@ -28,18 +28,15 @@ function SideMenu({ user: { unreadNotification, email, unreadMessage, username }
           </List.Item>
         </Link>
         <br />
-
-        <Link href="/messages">
-          <List.Item active={isActive("/messages")}>
+        <Link href="https://ak-messenger-app.herokuapp.com/">
+          <List.Item>
             <Icon
               name={unreadMessage ? "hand point right" : "mail outline"}
               size="large"
-              color={
-                (isActive("/messages") && "teal") || (unreadMessage && "orange")
-              }
+              color="purple"
             />
             <List.Content>
-              <List.Header content="Messages" />
+              <List.Header content="Messenger App" />
             </List.Content>
           </List.Item>
         </Link>
