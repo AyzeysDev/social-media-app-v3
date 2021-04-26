@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Helmet} from 'react-helmet';
 import axios from "axios";
 import baseUrl from "../utils/baseUrl";
 import CreatePost from "../components/Post/CreatePost";
@@ -46,8 +47,11 @@ function Index({ user, postsData, errorLoading }) {
 
   return (
     <>
+      <Helmet>
+        <style>{'body { background-color: black; }'}</style>
+      </Helmet>
       {showToastr && <PostDeleteToastr />}
-      <Segment>
+      <Segment inverted>
         <CreatePost user={user} setPosts={setPosts} />
         {posts.length === 0 || errorLoading ?  ( 
         <NoPosts /> 

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Form, Button, Image, Divider, Message, Icon } from "semantic-ui-react";
+import { Grid, Form, Button, Image, Divider, Message, Icon } from "semantic-ui-react";
 import uploadPic from "../../utils/uploadPicToCloudinary";
 import { submitNewPost } from "../../utils/postActions";
 
@@ -64,7 +64,7 @@ function CreatePost({ user, setPosts }) {
 
   return (
     <>
-      <Form error={error !== null} onSubmit={handleSubmit}>
+      <Form error={error !== null} onSubmit={handleSubmit} inverted>
         <Message
           error
           onDismiss={() => setError(null)}

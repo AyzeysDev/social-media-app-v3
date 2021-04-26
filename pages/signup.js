@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Form, Button, Message, Segment, Divider } from "semantic-ui-react";
+import {Helmet} from 'react-helmet';
 import CommonInputs from "../components/Common/CommonInputs";
 import ImageDropDiv from "../components/Common/ImageDropDiv";
 import { HeaderMessage, FooterMessage } from "../components/Common/WelcomeMessage";
@@ -106,16 +107,21 @@ function Signup() {
 
   return (
     <>
+      <Helmet>
+        <title>Signup | Tweezak</title>
+        <meta name='description' content='Signup - Tweezak' />
+        <style>{'body { background-color: black; }'}</style>
+      </Helmet>
       <HeaderMessage />
       <Form loading={formLoading} error={errorMsg !== null} onSubmit={handleSubmit}>
         <Message
           error
-          header="Oops!"
+          header="Try Again!"
           content={errorMsg}
           onDismiss={() => setErrorMsg(null)}
         />
 
-        <Segment>
+        <Segment inverted>
           <ImageDropDiv
             mediaPreview={mediaPreview}
             setMediaPreview={setMediaPreview}

@@ -20,7 +20,7 @@ function CommonInputs({
 
       <Button
         content="Add Social Links"
-        color="red"
+        color="blue"
         icon="at"
         type="button"
         onClick={() => setShowSocialLinks(!showSocialLinks)}
@@ -31,41 +31,41 @@ function CommonInputs({
           <Divider />
           <Form.Input
             icon="facebook f"
-            iconPosition="left"
             name="facebook"
             value={facebook}
             onChange={handleChange}
+            placeholder="https://facebook.com/"
           />
 
           <Form.Input
             icon="twitter"
-            iconPosition="left"
             name="twitter"
             value={twitter}
             onChange={handleChange}
+            placeholder="https://twitter.com/"
           />
 
           <Form.Input
             icon="instagram"
-            iconPosition="left"
             name="instagram"
             value={instagram}
             onChange={handleChange}
+            placeholder="https://instagram.com/"
           />
 
           <Form.Input
             icon="youtube"
-            iconPosition="left"
             name="youtube"
             value={youtube}
             onChange={handleChange}
+            placeholder="https://youtube.com/"
           />
 
           <Message
             icon="attention"
             info
             size="small"
-            header="Social Media Links Are Optional!"
+            header="Optional! Social Media Links aren't mandatory"
           />
         </>
       )}

@@ -9,18 +9,18 @@ function Navbar() {
   const isActive = route => router.pathname === route;
 
   return (
-    <Menu fluid borderless>
+    <Menu inverted fluid borderless>
       <Container text>
         <Link href="/login">
           <Menu.Item header active={isActive("/login")}>
-            <Icon size="large" name="sign in" />
+            <Icon size="large" name="info" />
             Login
           </Menu.Item>
         </Link>
 
         <Link href="/signup">
           <Menu.Item header active={isActive("/signup")}>
-            <Icon size="large" name="signup" />
+            <Icon size="large" name="pencil alternate" />
             Signup
           </Menu.Item>
         </Link>

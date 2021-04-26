@@ -30,17 +30,17 @@ function Layout({ children, user }) {
           <Ref innerRef={contextRef}>
             <Grid stackable columns= 'equal'>
               {/* <Grid.Row stretched> */}
-              <Grid.Column color= 'black' padded='vertically' only='large screen'>
+              <Grid.Column width={3} color= 'black' padded='vertically' only='large screen'>
                 <Sticky context={contextRef}>            
                   <SideMenu user={user} />
                 </Sticky>
               </Grid.Column>
 
-              <Grid.Column width={10} height={20}>
+              <Grid.Column width={10}>
                 <Visibility context={contextRef}>{children}</Visibility>
               </Grid.Column>
 
-              <Grid.Column color= 'black' only='large screen'>
+              <Grid.Column width={3} color= 'black' only='large screen'>
                 <Sticky context={contextRef}>
                   <Segment basic>
                     <Search />

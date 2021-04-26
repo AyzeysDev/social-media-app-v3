@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button, Message, Segment, Divider } from "semantic-ui-react";
+import {Helmet} from 'react-helmet';
 import { loginUser } from "../utils/authUser";
 import { HeaderMessage, FooterMessage } from "../components/Common/WelcomeMessage";
 import cookie from "js-cookie";
@@ -41,8 +42,13 @@ function Login() {
 
   return (
     <>
+      <Helmet>
+        <title>Login | Tweezak</title>
+        <meta name='description' content='Login - Tweezak' />
+        <style>{'body { background-color: black; }'}</style>
+      </Helmet>
       <HeaderMessage />
-      <Form loading={formLoading} error={errorMsg !== null} onSubmit={handleSubmit}>
+      <Form loading={formLoading} error={errorMsg !== null} onSubmit={handleSubmit} inverted>
         <Message
           error
           header="Oops!"
@@ -50,7 +56,7 @@ function Login() {
           onDismiss={() => setErrorMsg(null)}
         />
 
-        <Segment>
+        <Segment inverted>
           <Form.Input
             required
             label="Email"
