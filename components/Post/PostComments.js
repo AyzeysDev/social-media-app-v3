@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import { Comment, Icon } from "semantic-ui-react";
 import calculateTime from "../../utils/calculateTime";
 import { deleteComment } from "../../utils/postActions";
@@ -12,7 +13,7 @@ function PostComments({ comment, user, setComments, postId }) {
         <Comment>
           <Comment.Avatar src={comment.user.profilePicUrl} />
           <Comment.Content>
-            <Comment.Author as="a" href={`/${comment.user.username}`}>
+            <Comment.Author as= { Link } href={`/${comment.user.username}`}>
               {comment.user.name}
             </Comment.Author>
             <Comment.Metadata>{calculateTime(comment.date)}</Comment.Metadata>

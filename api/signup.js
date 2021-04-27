@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const isEmail = require("validator/lib/isEmail");
 const userPng =
-  "https://res.cloudinary.com/indersingh/image/upload/v1593464618/App/user_mklcpl.png";
+  "https://www.flaticon.com/svg/vstatic/svg/1946/1946369.svg?token=exp=1619517907~hmac=fe532bed00689ef266f6019567ec499b";
 
 const regexUserName = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/;
 

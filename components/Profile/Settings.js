@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { List, Divider, Message, Checkbox, Form, Button } from "semantic-ui-react";
 import { passwordUpdate } from "../../utils/profileActions";
 
-function Settings({ newMessagePopup }) {
+function Settings({ }) {
   const [passwordFields, showPasswordFields] = useState(false);
 
-  const [newMessageSettings, showNewMessageSettings] = useState(false);
+  // const [newMessageSettings, showNewMessageSettings] = useState(false);
 
-  const isFirstRun = useRef(true);
-  const [popupSetting, setPopupSetting] = useState(newMessagePopup);
+  // const isFirstRun = useRef(true);
+  // const [popupSetting, setPopupSetting] = useState(newMessagePopup);
 
   const [success, setSuccess] = useState(false);
 
@@ -16,12 +16,12 @@ function Settings({ newMessagePopup }) {
     success && setTimeout(() => setSuccess(false), 3000);
   }, [success]);
 
-  useEffect(() => {
-    if (isFirstRun.current) {
-      isFirstRun.current = false;
-      return;
-    }
-  }, [popupSetting]);
+  // useEffect(() => {
+  //   if (isFirstRun.current) {
+  //     isFirstRun.current = false;
+  //     return;
+  //   }
+  // }, [popupSetting]);
 
   return (
     <>
@@ -34,7 +34,7 @@ function Settings({ newMessagePopup }) {
 
       <List size="huge" animated>
         <List.Item>
-          <List.Icon name="user secret" size="large" verticalAlign="middle" />
+          <List.Icon color='orange' name="user secret" size="large" verticalAlign="middle" />
           <List.Content>
             <List.Header
               onClick={() => showPasswordFields(!passwordFields)}
@@ -51,33 +51,6 @@ function Settings({ newMessagePopup }) {
           )}
         </List.Item>
         <Divider />
-
-        {/* <List.Item>
-          <List.Icon name="paper plane outline" size="large" verticalAlign="middle" />
-
-          <List.Content>
-            <List.Header
-              onClick={() => showNewMessageSettings(!newMessageSettings)}
-              as="a"
-              content="Show New Message Popup?"
-            />
-          </List.Content>
-
-          <div style={{ marginTop: "10px" }}>
-            Control whether a Popup should appear when there is a New Message or not.
-            <br />
-            <br />
-            <Checkbox
-              checked={popupSetting}
-              toggle
-              onChange={() =>
-                toggleMessagePopup(popupSetting, setPopupSetting, setSuccess)
-              }
-            />
-          </div>
-        </List.Item>
-
-        <Divider /> */}
       </List>
     </>
   );

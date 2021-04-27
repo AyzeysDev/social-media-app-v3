@@ -75,7 +75,7 @@ function CreatePost({ user, setPosts }) {
         <Form.Group>
           <Image src={user.profilePicUrl} circular avatar inline />
           <Form.TextArea
-            placeholder="Whats Happening"
+            placeholder="Whats Happening ?"
             name="text"
             value={newPost.text}
             onChange={handleChange}
@@ -91,7 +91,7 @@ function CreatePost({ user, setPosts }) {
             onChange={handleChange}
             label="Add Location"
             icon="map marker alternate"
-            placeholder="Want to add Location?"
+            placeholder="Share your location"
           />
 
           <input

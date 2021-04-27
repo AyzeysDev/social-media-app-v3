@@ -18,11 +18,12 @@ function ProfileHeader({
 
   return (
     <>
-      <Segment>
+      <Segment color='black' inverted>
         <Grid stackable>
           <Grid.Column width={11}>
             <Grid.Row>
               <Header
+                inverted                
                 as="h2"
                 content={profile.user.name}
                 style={{ marginBottom: "5px" }}
@@ -37,13 +38,13 @@ function ProfileHeader({
             <Grid.Row>
               {profile.social ? (
                 <List>
-                  <List.Item>
+                  <List.Item as='a' href= 'https://gmail.com/'>
                     <List.Icon name="mail" />
                     <List.Content content={profile.user.email} />
                   </List.Item>
 
                   {profile.social.facebook && (
-                    <List.Item>
+                    <List.Item as='a' href= 'https://facebook.com/'>
                       <List.Icon name="facebook" color="blue" />
                       <List.Content
                         style={{ color: "blue" }}
@@ -53,7 +54,7 @@ function ProfileHeader({
                   )}
 
                   {profile.social.instagram && (
-                    <List.Item>
+                    <List.Item as='a' href= 'https://instagram.com/'>
                       <List.Icon name="instagram" color="red" />
                       <List.Content
                         style={{ color: "blue" }}
@@ -63,7 +64,7 @@ function ProfileHeader({
                   )}
 
                   {profile.social.youtube && (
-                    <List.Item>
+                    <List.Item as='a' href= 'https://youtube.com/'>
                       <List.Icon name="youtube" color="red" />
                       <List.Content
                         style={{ color: "blue" }}
@@ -73,7 +74,7 @@ function ProfileHeader({
                   )}
 
                   {profile.social.twitter && (
-                    <List.Item>
+                    <List.Item as='a' href= 'https://twitter.com/'>
                       <List.Icon name="twitter" color="blue" />
                       <List.Content
                         style={{ color: "blue" }}

@@ -67,7 +67,7 @@ export default ({ user, loggedUserFollowStats, setUserFollowStats, profileUserId
                   )}
                 </List.Content>
                 <Image avatar src={profileFollower.user.profilePicUrl} />
-                <List.Content as="a" href={`/${profileFollower.user.username}`}>
+                <List.Content as= 'a' href={`/${profileFollower.user.username}`}>
                   {profileFollower.user.name}
                 </List.Content>
               </List.Item>

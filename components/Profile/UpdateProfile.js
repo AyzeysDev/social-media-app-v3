@@ -38,6 +38,7 @@ function UpdateProfile({ Profile }) {
   return (
     <>
       <Form
+        inverted
         error={errorMsg !== null}
         loading={loading}
         onSubmit={async e => {

@@ -2,8 +2,8 @@ import { Message, Button } from "semantic-ui-react";
 
 export const NoProfilePosts = () => (
   <>
-    <Message info icon="meh" header="Sorry" content="User has not posted anything yet!" />
-    <Button icon="long arrow alternate left" content="Go Back" as="a" href="/" />
+    <Message color='olive' icon="minus circle" header="Empty" content="No Posts to Show" />
+    <Button icon="long arrow alternate left" content="Return to Home" as= 'a' href="/" />
   </>
 );
 
@@ -31,9 +31,9 @@ export const NoMessages = () => (
 export const NoPosts = () => (
   <Message
     info
-    icon="meh"
-    header="Hey!"
-    content="No Posts. Make sure you have followed someone."
+    icon="heart"
+    header="Hey! Welcome to Tweezak"
+    content="No Posts to show. Make sure you follow someone to view posts."
   />
 );
 

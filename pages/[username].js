@@ -66,13 +66,13 @@ function ProfilePage({
 
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <style>{'body { background-color: black; }'}</style>
-      </Helmet> */}
+      </Helmet>
       {showToastr && <PostDeleteToastr />}
 
-      <Grid stackable>
-        <Grid.Row>
+      <Grid stackable inverted>
+        <Grid.Row color='black'>
           <Grid.Column>
             <ProfileMenuTabs
               activeItem={activeItem}
@@ -85,7 +85,7 @@ function ProfilePage({
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row>
+        <Grid.Row color='black'>
           <Grid.Column>
             {activeItem === "profile" && (
               <>
