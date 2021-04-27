@@ -21,7 +21,7 @@ function SideMenu({ user: { unreadNotification, email, unreadMessage, username }
         relaxed>
         <Link href="/">
           <List.Item active={isActive("/")}>
-            <Icon name="home" size="large" color={isActive("/") && "teal"} />
+            <Icon name="home" size="large" color={"violet"} />
             <List.Content>
               <List.Header content="Home" />
             </List.Content>
@@ -31,7 +31,7 @@ function SideMenu({ user: { unreadNotification, email, unreadMessage, username }
         <Link href="https://ak-messenger-app.herokuapp.com/">
           <List.Item>
             <Icon
-              name={unreadMessage ? "hand point right" : "mail outline"}
+              name="chat"
               size="large"
               color="purple"
             />
@@ -45,19 +45,19 @@ function SideMenu({ user: { unreadNotification, email, unreadMessage, username }
         <Link href={`/${username}`}>
           <List.Item active={router.query.username === username}>
             <Icon
-              name="user"
+              name="user outline"
               size="large"
-              color={router.query.username === username && "teal"}
+              color={"green"}
             />
             <List.Content>
-              <List.Header content="Account" />
+              <List.Header content="Profile" />
             </List.Content>
           </List.Item>
         </Link>
         <br />
 
         <List.Item onClick={() => logoutUser(email)}>
-          <Icon name="log out" size="large" />
+          <Icon name="backward" size="large" color={"red"}/>
           <List.Content>
             <List.Header content="Logout" />
           </List.Content>

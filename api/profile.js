@@ -165,12 +165,13 @@ router.put("/unfollow/:userToUnfollowId", authMiddleware, async (req, res) => {
 
 router.post("/update", authMiddleware, async (req, res) => {
   try {
+    console.log(req.body);
     const { userId } = req;
-
+    console.log(userId);
     const { bio, facebook, youtube, twitter, instagram, profilePicUrl } = req.body;
 
     let profileFields = {};
-    profileFields.user = user._id;
+    profileFields.user = userId;
 
     profileFields.bio = bio;
 
