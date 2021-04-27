@@ -51,7 +51,7 @@ function Login() {
       <Form loading={formLoading} error={errorMsg !== null} onSubmit={handleSubmit} inverted>
         <Message
           error
-          header="Oops!"
+          header="Try Again!"
           content={errorMsg}
           onDismiss={() => setErrorMsg(null)}
         />
@@ -66,7 +66,6 @@ function Login() {
             onChange={handleChange}
             fluid
             icon="envelope"
-            iconPosition="left"
             type="email"
           />
 
@@ -83,7 +82,6 @@ function Login() {
               link: true,
               onClick: () => setShowPassword(!showPassword)
             }}
-            iconPosition="left"
             type={showPassword ? "text" : "password"}
             required
           />

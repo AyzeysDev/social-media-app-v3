@@ -84,7 +84,7 @@ const UpdatePassword = ({ setSuccess, showPasswordFields }) => {
 
   return (
     <>
-      <Form
+      <Form inverted
         error={errorMsg !== null}
         loading={loading}
         onSubmit={async e => {
