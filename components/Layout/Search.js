@@ -14,10 +14,10 @@ function SearchComponent() {
   const handleChange = async e => {
     const { value } = e.target;
     setText(value);
-    setLoading(true);
-    if (value.length === 0) return setText(value);
+ 
+    if (value.length === 0) return;
 
-    if (value.trim().length === 0) return setText(value);
+    if (value.trim().length === 0) return;
 
 
     try {
