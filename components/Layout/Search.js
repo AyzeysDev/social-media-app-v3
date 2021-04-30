@@ -13,13 +13,11 @@ function SearchComponent() {
 
   const handleChange = async e => {
     const { value } = e.target;
+    // if (value.length === 0) return;
+
+    if (value.trim().length === 0)  return setText(value);
+
     setText(value);
- 
-    if (value.length === 0) return;
-
-    if (value.trim().length === 0) return;
-
-
     try {
       cancel && cancel();
       const CancelToken = axios.CancelToken;
