@@ -14,7 +14,7 @@ function SearchComponent() {
   const handleChange = async e => {
     const { value } = e.target;
     // if (value.length === 0) return;
-
+    setLoading(true);
     if (value.trim().length === 0)  return setText(value);
 
     setText(value);
