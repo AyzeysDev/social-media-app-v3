@@ -14,10 +14,10 @@ function SearchComponent() {
   const handleChange = async e => {
     const { value } = e.target;
     // if (value.length === 0) return;
-    setLoading(true);
     if (value.trim().length === 0)  return setText(value);
-
     setText(value);
+    setLoading(true);
+
     try {
       cancel && cancel();
       const CancelToken = axios.CancelToken;
@@ -34,10 +34,10 @@ function SearchComponent() {
         results.length > 0 && setResults([]);
         return setLoading(false);
       }
-
       setResults(res.data);
     } catch (error) {
-      alert("Error Searching");
+      // alert("Error Searching");
+      // console.log("error searching");
     }
 
     setLoading(false);
